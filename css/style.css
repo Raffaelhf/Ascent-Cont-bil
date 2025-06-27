@@ -1,0 +1,384 @@
+@media (min-width:1400px){
+body{
+  background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'montserrat', sans-serif;
+}
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: center;
+    background-color:#010e27 ;
+    padding-top: 3rem;
+    
+}
+
+.header{
+align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo span{
+    font-size: 2rem;
+    color: white;
+    font-family: 'montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.logo img{
+width: 70px;
+
+}
+
+.header{
+    width: 1320px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.menu {
+      list-style: none;
+      display: flex;
+      gap: 50px;
+    }
+
+    .menu > li {
+      position: relative;
+    }
+
+    .menu li a {
+      display: block;
+      padding: 15px 20px;
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.3s;
+      font-size: 20px;
+    }
+
+    .menu li a:hover {
+      text-decoration: underline;
+    }
+
+ .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;      
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #444 10%);
+      min-width: 150px;
+      z-index: 999;
+      list-style: none;
+    }
+
+    
+
+    
+    .submenu li {
+      border-bottom: 1px solid #555;
+    }
+
+    .submenu li a {
+      padding: 12px 16px;
+    }
+
+    /* Mostrar submenu ao passar o mouse */
+    .menu li:hover .submenu {
+      display: block;
+      
+    }
+
+.btn-contato{
+    padding: 10px 40px;
+    background-color:#D4AF37 ;
+    border-radius: 7px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-contato:hover{
+    background-color: #009688 !important;
+    text-decoration: none !important;
+}
+
+
+/* FIM HEADER */
+
+/* SESSÃO 01 */
+.s1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#010e27 ;
+    margin-bottom: 5rem;
+}
+
+.sessao-01{
+    display: flex;
+    width: 1320px;
+}
+
+.part-txt{
+align-content: center;
+}
+
+.part-txt h1{
+    font-size: 5rem;
+    color: white;
+    
+}
+
+.part-txt h3{
+    width: 80%;
+    font-size: 3rem;
+    color: #D4AF37;
+    margin-bottom: 3rem;
+}
+
+.part-img img{
+    width: 600px;
+}
+
+/* FIM DA SESSAO 01 */
+
+
+/* SESSÃO 02 */
+/* .s2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+    background-color: #e4e4e4;
+}
+.sessao-02{
+    width: 1320px;
+}
+
+.titulo{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.titulo h2{
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: black;
+}
+
+.part-txt-s2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.part-txt-s2 p{
+  width: 1000px;
+  font-family: 'lato', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.part-txt2-s2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quest{
+  margin-bottom: 3rem;
+}
+
+.part-txt2-s2 h3{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.part-txt2-s2 p{
+width: 1000px;
+  font-family: 'lato', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+} */
+
+.s2 {
+  padding: 0px 20px;
+  background-color: #f9f9f9;
+  font-family: 'lato', sans-serif;
+  color: #333;
+}
+
+.sessao-02 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titulo h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #1e1e1e;
+  position: relative;
+}
+
+.titulo h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #010e27;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+
+.part-txt-s2{
+  margin-bottom: 5rem;
+}
+
+.part-txt-s2 p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+.part-txt2-s2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 5rem;
+}
+
+.quest {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quest:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.quest h3 {
+  font-size: 1.2rem;
+  color: #010e27;
+  margin-bottom: 10px;
+}
+
+.quest p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+
+/* FIM DA SESSÃO 02  */
+
+
+/* SESSÃO 03 */
+.s3{
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+  background-color: #010e27;
+  
+}
+.sessao-03{
+  width: 1320px;
+  
+}
+
+.sessao-03 .titulo{
+  margin-bottom: 3rem;
+}
+
+#titulo-s3{
+  color: #fff !important;
+}
+.contato{
+  display: flex;
+  justify-content: space-around;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+}
+
+.links a{
+  display: flex;
+    align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.links a:hover{
+  color: #009688;
+}
+
+.links i{
+  margin-right: 1rem;
+ font-size: 30px;
+}
+
+.divisor{
+  width: 10px;
+  height: 220px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.wpp{
+  display: flex;
+    align-items: center;
+}
+
+.botao-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .botao-whatsapp i {
+      margin-right: 8px;
+      font-size: 20px;
+    }
+
+    .botao-whatsapp:hover {
+      background-color: #1ebe5b;      
+    }
+
+    /* FIM DA SESSÃO 03 */
+
+/* FOOTER */
+footer{
+  text-align: center;
+  font-family: 'lota', sans-serif;
+  padding: 5px 0;
+}
+/* FIM DO FOOTER */
+
+  } 

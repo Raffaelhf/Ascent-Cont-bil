@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascent Contábil - Contabilidade Estratégica para Seu Crescimento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#002366',
+                        secondary: '#009688',
+                        accent: '#D4AF37',
+                        dark: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 35, 102, 0.9) 0%, rgba(0, 150, 136, 0.8) 100%);
+        }
+        
+        .nav-shadow {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .whatsapp-float {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5583999999999" target="_blank" class="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full z-50 whatsapp-float hover:bg-green-600 transition">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="bg-white sticky top-0 z-40 nav-shadow">
+        <div class="container mx-auto px-6 py-4 max-w-7xl">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-primary">
+                        <img src="https://via.placeholder.com/200x60?text=Ascent+Cont%C3%A1bil" alt="Ascent Contábil" class="h-12">
+                    </a>
+                </div>
+                <div class="md:flex items-center hidden space-x-8">
+                    <a href="#" class="text-primary font-medium hover:text-secondary transition">Início</a>
+                    <a href="#servicos" class="text-primary font-medium hover:text-secondary transition">Serviços</a>
+                    <a href="#sobre" class="text-primary font-medium hover:text-secondary transition">Quem Somos</a>
+                    <a href="#blog" class="text-primary font-medium hover:text-secondary transition">Blog</a>
+                    <a href="#contato" class="text-primary font-medium hover:text-secondary transition">Contato</a>
+                    <a href="#contato" class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-primary transition">Fale Conosco</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+                <a href="#" class="text-primary font-medium hover:text-secondary transition">Início</a>
+                <a href="#servicos" class="text-primary font-medium hover:text-secondary transition">Serviços</a>
+                <a href="#sobre" class="text-primary font-medium hover:text-secondary transition">Quem Somos</a>
+                <a href="#blog" class="text-primary font-medium hover:text-secondary transition">Blog</a>
+                <a href="#contato" class="text-primary font-medium hover:text-secondary transition">Contato</a>
+                <a href="#contato" class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-primary transition text-center">Fale Conosco</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="container mx-auto px-6 py-20 md:py-32 max-w-7xl">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
+                        Ascent Contábil: Descomplicando as Finanças, Impulsionando seu Negócio
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8">Soluções contábeis estratégicas para seu crescimento em todo o Brasil.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contato" class="bg-accent text-primary font-bold px-6 py-3 rounded-lg hover:bg-white transition text-center">
+                            Agende uma Consultoria Gratuita
+                        </a>
+                        <a href="#servicos" class="border-2 border-white text-white font-bold px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition text-center">
+                            Conheça Nossos Serviços
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://via.placeholder.com/600x500?text=Ilustra%C3%A7%C3%A3o+Financeira" alt="Ilustração Financeira" class="rounded-lg shadow-xl animate-float w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="py-16">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Por que escolher a Ascent Contábil?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Crescimento Estratégico</h3>
+                    <p class="text-dark">Mais do que números, oferecemos insights que impulsionam seu negócio para o próximo nível.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="bg-secondary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Segurança Digital</h3>
+                    <p class="text-dark">Tecnologia avançada para proteger seus dados e garantir total conformidade com a legislação.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="bg-accent rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Suporte Personalizado</h3>
+                    <p class="text-dark">Atendimento humanizado e dedicado, com especialistas disponíveis para suas necessidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <h2 class="text-3xl font-bold text-center text-primary mb-4">Nossos Serviços</h2>
+            <p class="text-center text-dark mb-12 max-w-3xl mx-auto">Soluções completas e personalizadas para sua empresa, independentemente do tamanho ou setor.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <div class="bg-white p-6 rounded-xl shadow service-card">
+                    <div class="bg-primary bg-opacity-10 p-4 rounded-lg mb-4">
+                        <i class="fas fa-building text-primary text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Abertura de Empresa</h3>
+                    <p class="text-dark mb-4">Acompanhamento completo desde o planejamento inicial até a efetiva abertura do seu negócio.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="#contato" class="text-secondary font-medium hover:underline">Saiba mais</a>
+                        <i class="fas fa-arrow-right text-secondary"></i>
+                    </div>
+                </div>
+                
+                <!-- Serviço 2 -->
+                <div class="bg-white p-6 rounded-xl shadow service-card">
+                    <div class="bg-secondary bg-opacity-10 p-4 rounded-lg mb-4">
+                        <i class="fas fa-calculator text-secondary text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Contabilidade Digital</h3>
+                    <p class="text-dark mb-4">Acompanhamento contábil 100% online com acesso fácil às informações e relatórios.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="#contato" class="text-secondary font-medium hover:underline">Saiba mais</a>
+                        <i class="fas fa-arrow-right text-secondary"></i>
+                    </div>
+                </div>
+                
+                <!-- Serviço 3 -->
+                <div class="bg-white p-6 rounded-xl shadow service-card">
+                    <div class="bg-accent bg-opacity-10 p-4 rounded-lg mb-4">
+                        <i class="fas fa-file-invoice-dollar text-accent text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Planejamento Tributário</h3>
+                    <p class="text-dark mb-4">Reduza legalmente seus impostos com estratégias personalizadas para seu negócio.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="#contato" class="text-secondary font-medium hover:underline">Saiba mais</a>
+                        <i class="fas fa-arrow-right text-secondary"></i>
+                    </div>
+                </div>
+                
+                <!-- Serviço 4 -->
+                <div class="bg-white p-6 rounded-xl shadow service-card">
+                    <div class="bg-primary bg-opacity-10 p-4 rounded-lg mb-4">
+                        <i class="fas fa-users text-primary text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Folha de Pagamento</h3>
+                    <p class="text-dark mb-4">Gestão completa da folha, benefícios e obrigações trabalhistas para sua equipe.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="#contato" class="text-secondary font-medium hover:underline">Saiba mais</a>
+                        <i class="fas fa-arrow-right text-secondary"></i>
+                    </div>
+                </div>
+                
+                <!-- Serviço 5 -->
+                <div class="bg-white p-6 rounded-xl shadow service-card">
+                    <div class="bg-secondary bg-opacity-10 p-4 rounded-lg mb-4">
+                        <i class="fas fa-chart-pie text-secondary text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Consultoria Financeira</h3>
+                    <p class="text-dark mb-4">Análise estratégica para melhorar rentabilidade e sustentabilidade do negócio.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="#contato" class="text-secondary font-medium hover:underline">Saiba mais</a>
+                        <i class="fas fa-arrow-right text-secondary"></i>
+                    </div>
+                </div>
+                
+                <!-- Serviço 6 -->
+                <div class="bg-white p-6 rounded-xl shadow service-card">
+                    <div class="bg-accent bg-opacity-10 p-4 rounded-lg mb-4">
+                        <i class="fas fa-search-dollar text-accent text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Auditoria Contábil</h3>
+                    <p class="text-dark mb-4">Avaliação independente das contas e processos para garantir segurança e conformidade.</p>
+                    <div class="flex justify-between items-center">
+                        <a href="#contato" class="text-secondary font-medium hover:underline">Saiba mais</a>
+                        <i class="fas fa-arrow-right text-secondary"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contato" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-secondary transition inline-block">
+                    Quero falar com um especialista
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <section id="sobre" class="py-16">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Quem Somos</h2>
+                    <p class="text-dark mb-4">A Ascent Contábil nasceu da visão de unir expertise contábil tradicional com as possibilidades da tecnologia digital, oferecendo serviços de alto nível para todo o território nacional.</p>
+                    <p class="text-dark mb-4">Nossa missão é simplificar a complexidade contábil e fiscal, permitindo que empreendedores se concentrem no que realmente importa: o crescimento do seu negócio.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div>
+                            <h4 class="font-bold text-primary">Missão</h4>
+                            <p class="text-dark">Facilitar a gestão financeira e contábil com excelência técnica e atendimento humanizado.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-primary">Visão</h4>
+                            <p class="text-dark">Ser referência em consultoria contábil estratégica no Brasil até 2030.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-primary">Valores</h4>
+                            <p class="text-dark">Ética, Transparência, Inovação e Resultados.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-primary">Atendimento</h4>
+                            <p class="text-dark">Todo o território nacional com tecnologia e equipe distribuída.</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#equipe" class="text-secondary font-medium hover:underline inline-flex items-center">
+                        Conheça nossa equipe <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <img src="https://via.placeholder.com/800x500?text=Equipe+Ascent" alt="Equipe Ascent Contábil" class="rounded-lg mb-4">
+                        <h3 class="text-xl font-bold text-primary mb-3">Expertise reconhecida</h3>
+                        <p class="text-dark">Nossa equipe combina décadas de experiência com contínua atualização nas novas tecnologias e legislações fiscais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipe -->
+    <section id="equipe" class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Nossa Equipe</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Membro 1 -->
+                <div class="bg-white text-dark p-6 rounded-xl shadow text-center">
+                    <img src="https://via.placeholder.com/200x200?text=CEO" alt="CEO" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-1">Carlos Silva</h3>
+                    <p class="text-secondary mb-3">CEO e Contador Sênior</p>
+                    <p class="text-dark mb-4">15+ anos de experiência em contabilidade estratégica para médias empresas.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-primary hover:text-secondary"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-primary hover:text-secondary"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Membro 2 -->
+                <div class="bg-white text-dark p-6 rounded-xl shadow text-center">
+                    <img src="https://via.placeholder.com/200x200?text=CFO" alt="CFO" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-1">Ana Oliveira</h3>
+                    <p class="text-secondary mb-3">CFO e Especialista Fiscal</p>
+                    <p class="text-dark mb-4">Especialista em planejamento tributário e compliance fiscal.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-primary hover:text-secondary"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-primary hover:text-secondary"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Membro 3 -->
+                <div class="bg-white text-dark p-6 rounded-xl shadow text-center">
+                    <img src="https://via.placeholder.com/200x200?text=CTO" alt="CTO" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold mb-1">Ricardo Santos</h3>
+                    <p class="text-secondary mb-3">CTO e Desenvolvedor</p>
+                    <p class="text-dark mb-4">Responsável pela plataforma digital e integrações tecnológicas.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-primary hover:text-secondary"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-primary hover:text-secondary"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="mb-4">+10 especialistas em nossa equipe distribuída por todo o Brasil</p>
+                <a href="#contato" class="bg-white text-primary px-8 py-3 rounded-lg hover:bg-secondary hover:text-white transition inline-block">
+                    Fale com um de nossos especialistas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="py-16">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">O que nos diferencia</h2>
+            
+            <div class="flex flex-col md:flex-row items-center mb-12">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <h3 class="text-2xl font-bold text-primary mb-4">Atendimento humanizado com tecnologia de ponta</h3>
+                    <p class="text-dark mb-4">Combinamos o melhor dos dois mundos: a eficiência das ferramentas digitais mais avançadas com o atendimento personalizado que só humanos podem oferecer.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                            <span class="text-dark">Plataforma digital exclusiva com acesso 24/7</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                            <span class="text-dark">Equipe alocada em diferentes regiões para entender as particularidades locais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mr-2 mt-1"></i>
+                            <span class="text-dark">Processos otimizados que reduzem burocracias</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <img src="https://via.placeholder.com/800x500?text=Tecnologia+Ascent" alt="Tecnologia Ascent" class="rounded-lg">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:order-last md:pl-12">
+                    <h3 class="text-2xl font-bold text-primary mb-4">Soluções especializadas por segmento</h3>
+                    <p class="text-dark mb-4">Entendemos que cada setor tem necessidades específicas e desenvolvemos expertise em nichos estratégicos.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm">Startups</span>
+                        <span class="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm">Comércio Eletrônico</span>
+                        <span class="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm">Serviços Profissionais</span>
+                        <span class="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm">Indústria</span>
+                        <span class="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm">Agronegócio</span>
+                        <span class="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm">MEIs</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:order-first">
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <img src="https://via.placeholder.com/800x500?text=Segmentos+Especializados" alt="Segmentos Especializados" class="rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/Conteúdo -->
+    <section id="blog" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <h2 class="text-3xl font-bold text-center text-primary mb-4">Conteúdo para seu negócio</h2>
+            <p class="text-center text-dark mb-12 max-w-3xl mx-auto">Acompanhe nossos artigos e materiais ricos para se manter atualizado e tomar melhores decisões.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Artigo 1 -->
+                <div class="bg-white rounded-xl shadow overflow-hidden">
+                    <img src="https://via.placeholder.com/800x500?text=Artigo+1" alt="Artigo" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-secondary">Legislação</span>
+                        <h3 class="text-xl font-bold text-primary my-3">Mudanças no Simples Nacional 2023: o que seu negócio precisa saber</h3>
+                        <p class="text-dark mb-4">Entenda as principais alterações na legislação e como elas afetam sua empresa.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">15 de junho, 2023</span>
+                            <a href="#" class="text-secondary font-medium hover:underline">Ler mais</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Artigo 2 -->
+                <div class="bg-white rounded-xl shadow overflow-hidden">
+                    <img src="https://via.placeholder.com/800x500?text=Artigo+2" alt="Artigo" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-secondary">Gestão</span>
+                        <h3 class="text-xl font-bold text-primary my-3">5 erros contábeis que podem afundar seu negócio</h3>
+                        <p class="text-dark mb-4">Conheça os principais equívocos e como evitá-los para manter sua empresa saudável.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">1 de junho, 2023</span>
+                            <a href="#" class="text-secondary font-medium hover:underline">Ler mais</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Artigo 3 -->
+                <div class="bg-white rounded-xl shadow overflow-hidden">
+                    <img src="https://via.placeholder.com/800x500?text=Artigo+3" alt="Artigo" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm text-secondary">Tecnologia</span>
+                        <h3 class="text-xl font-bold text-primary my-3">Por que migrar para a contabilidade digital?</h3>
+                        <p class="text-dark mb-4">Descubra os benefícios de modernizar sua gestão financeira com tecnologia.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">20 de maio, 2023</span>
+                            <a href="#" class="text-secondary font-medium hover:underline">Ler mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-secondary transition inline-flex items-center">
+                    Ver todos os artigos <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <!-- Material Rico -->
+            <div class="mt-16 bg-white rounded-xl shadow overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img src="https://via.placeholder.com/800x500?text=E-book" alt="E-book" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Baixe nosso Guia Completo para Empreendedores</h3>
+                        <p class="text-dark mb-6">Tudo o que você precisa saber para abrir e gerenciar seu negócio com segurança financeira e fiscal.</p>
+                        <form class="space-y-4">
+                            <input type="text" placeholder="Seu nome" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                            <input type="email" placeholder="Seu e-mail" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                            <input type="tel" placeholder="Seu telefone (opcional)" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                            <button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition">
+                                Baixar Guia Gratuito
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-16">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">O que nossos clientes dizem</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white p-8 rounded-xl shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-dark italic mb-6">"A Ascent revolucionou nossa gestão financeira. Com o planejamento tributário que fizeram, reduzimos 25% dos impostos no primeiro ano. Recomendo para qualquer empresa que busque crescimento com segurança."</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/80x80?text=Cliente" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-primary">Mariana Ferreira</h4>
+                            <p class="text-sm text-gray-500">CEO, ModaFit</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="bg-white p-8 rounded-xl shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-dark italic mb-6">"Como startup, precisávamos de uma contabilidade que entendesse nosso modelo de negócio e crescimento rápido. A Ascent não só entendeu, como tornou-se parceira estratégica em nossa expansão nacional."</p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/80x80?text=Cliente" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-primary">Roberto Alves</h4>
+                            <p class="text-sm text-gray-500">Co-fundador, TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Parceiros -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-center text-primary mb-8">Parceiros e Certificações</h3>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                    <img src="https://via.placeholder.com/120x60?text=CRC" alt="CRC" class="h-12">
+                    <img src="https://via.placeholder.com/120x60?text=ContaAzul" alt="Conta Azul" class="h-12">
+                    <img src="https://via.placeholder.com/120x60?text=Omie" alt="Omie" class="h-12">
+                    <img src="https://via.placeholder.com/120x60?text=Sebrae" alt="Sebrae" class="h-12">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Perguntas Frequentes</h2>
+            
+            <div class="space-y-4">
+                <!-- Pergunta 1 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <button class="faq-question flex justify-between items-center w-full px-6 py-4 text-left font-medium text-primary focus:outline-none">
+                        <span>Como funciona a contabilidade digital para empresas em outros estados?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-dark">Nosso modelo de atendimento digital foi pensado para todo o Brasil. Atendemos remotamente com a mesma qualidade e eficiência, utilizando tecnologia para realizar a contabilidade conforme as legislações específicas de cada estado.</p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 2 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <button class="faq-question flex justify-between items-center w-full px-6 py-4 text-left font-medium text-primary focus:outline-none">
+                        <span>Quais documentos preciso ter para abrir minha empresa?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-dark">Os documentos variam conforme o tipo societário (MEI, LTDA, SA, etc.), mas geralmente são necessários: RG, CPF, comprovante de residência e, se aplicável, contrato social. Orientamos cada cliente individualmente sobre os documentos específicos para seu caso.</p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 3 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <button class="faq-question flex justify-between items-center w-full px-6 py-4 text-left font-medium text-primary focus:outline-none">
+                        <span>Qual a diferença entre Lucro Real e Lucro Presumido?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-dark">Lucro Real calcula o IRPJ e CSLL sobre o lucro efetivo da empresa, enquanto Lucro Presumido estima uma base de cálculo pré-definida por lei. A melhor opção depende do faturamento, atividade e margem de lucro do negócio. Nossos especialistas podem ajudar a escolher o regime ideal para sua realidade.</p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 4 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <button class="faq-question flex justify-between items-center w-full px-6 py-4 text-left font-medium text-primary focus:outline-none">
+                        <span>Quanto custa um serviço contábil para minha empresa?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-dark">Os valores variam conforme porte da empresa, regime tributário, número de funcionários e serviços necessários. Oferecemos planos personalizados para cada perfil de negócio. Agende uma consultoria gratuita para receber uma proposta específica para sua empresa.</p>
+                    </div>
+                </div>
+                
+                <!-- Pergunta 5 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <button class="faq-question flex justify-between items-center w-full px-6 py-4 text-left font-medium text-primary focus:outline-none">
+                        <span>Posso trocar de contabilidade no meio do ano?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-4 hidden">
+                        <p class="text-dark">Sim, é possível migrar a qualquer momento. Nossa equipe cuida de todo o processo burocrático de transferência dos documentos e responsabilidade técnica, garantindo uma transição tranquila sem interrupção no atendimento contábil.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="mb-4 text-dark">Não encontrou sua dúvida?</p>
+                <a href="#contato" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-secondary transition inline-block">
+                    Fale conosco
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-secondary text-white">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="text-3xl font-bold mb-6">Pronto para transformar sua gestão financeira?</h2>
+            <p class="text-xl mb-8">Agende uma consultoria gratuita e descubra como podemos ajudar seu negócio a crescer com segurança.</p>
+            <a href="#contato" class="bg-white text-primary font-bold px-8 py-4 rounded-lg hover:bg-accent hover:text-white transition inline-block">
+                QUERO FALAR COM UM ESPECIALISTA
+            </a>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-16">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Entre em Contato</h2>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h3 class="text-2xl font-bold text-primary mb-6">Como podemos ajudar?</h3>
+                    <p class="text-dark mb-8">Preencha o formulário ou use um dos nossos canais diretos. Nossa equipe responderá o mais rápido possível.</p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary mb-1">Endereço</h4>
+                                <p class="text-dark">Av. Visconde de Albuquerque, 1450<br>João Pessoa - PB, 58040-020</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary bg-opacity-10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone-alt text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary mb-1">Telefone / WhatsApp</h4>
+                                <p class="text-dark">(83) 99999-9999</p>
+                                <a href="https://wa.me/5583999999999" class="text-secondary font-medium hover:underline">Enviar mensagem</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-accent bg-opacity-10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary mb-1">E-mail</h4>
+                                <p class="text-dark">contato@ascentcontabil.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <h4 class="font-bold text-primary mb-4">Horário de Atendimento</h4>
+                        <p class="text-dark mb-2">Segunda à Sexta: 8h às 18h</p>
+                        <p class="text-dark">Sábado: 9h às 12h (apenas WhatsApp)</p>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-white p-8 rounded-xl shadow">
+                        <div class="mb-6">
+                            <label for="nome" class="block text-primary font-medium mb-2">Nome*</label>
+                            <input type="text" id="nome" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-primary font-medium mb-2">E-mail*</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="telefone" class="block text-primary font-medium mb-2">Telefone*</label>
+                            <input type="tel" id="telefone" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="servico" class="block text-primary font-medium mb-2">Serviço de Interesse</label>
+                            <select id="servico" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                                <option value="">Selecione um serviço</option>
+                                <option value="abertura">Abertura de Empresa</option>
+                                <option value="contabilidade">Contabilidade Digital</option>
+                                <option value="tributario">Planejamento Tributário</option>
+                                <option value="folha">Folha de Pagamento</option>
+                                <option value="consultoria">Consultoria Financeira</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="mensagem" class="block text-primary font-medium mb-2">Mensagem*</label>
+                            <textarea id="mensagem" rows="4" class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary" required></textarea>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-primary focus:ring-secondary">
+                                <span class="ml-2 text-dark">Desejo receber novidades e conteúdos exclusivos da Ascent</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-white px-6 py-4 rounded-lg hover:bg-secondary transition font-bold">
+                            ENVIAR MENSAGEM
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.029790983868!2d-34.89180982503406!3d-7.119929692913586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace810852ae4f1%3A0x8c48372b4a40b7e6!2sAv.%20Visconde%20de%20Albuquerque%2C%201450%20-%20Mana%C3%ADra%2C%20Jo%C3%A3o%20Pessoa%20-%20PB%2C%2058040-020!5e0!3m2!1sen!2sbr!4v1686324267069!5m2!1sen!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Ascent Contábil</h3>
+                    <p class="mb-4">Sua contabilidade estratégica para o crescimento em todo o Brasil.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-secondary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-secondary"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-secondary"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="hover:text-secondary"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Serviços</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-secondary transition">Contabilidade Digital</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Abertura de Empresa</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Planejamento Tributário</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Folha de Pagamento</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Consultoria Financeira</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Links Úteis</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-secondary transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Perguntas Frequentes</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Política de Privacidade</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Termos de Uso</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="mb-4">Assine e receba conteúdos exclusivos sobre gestão financeira e contábil.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 w-full rounded-l-lg text-dark focus:outline-none">
+                        <button type="submit" class="bg-secondary px-4 rounded-r-lg hover:bg-accent transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2023 Ascent Contábil. Todos os direitos reservados.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <img src="https://via.placeholder.com/80x30?text=CRC" alt="CRC" class="h-8">
+                    <img src="https://via.placeholder.com/80x30?text=Certificado" alt="Certificado" class="h-8">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle answer
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                icon.classList.toggle('rotate-180');
+                
+                // Close other answers
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.nextElementSibling.classList.add('hidden');
+                        q.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Form submission handling
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would normally send the form data to your server
+                // For demo purposes, we'll just show an alert
+                alert('Obrigado por sua mensagem! Entraremos em contato em breve.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
