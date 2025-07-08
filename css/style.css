@@ -1,3 +1,9 @@
+@import url('mobile.css');
+@import url('tablet.css');
+@import url('outras.css');
+
+
+
 @media (min-width:1400px){
 body{
   background-color: #f9f9f9;
@@ -5,6 +11,10 @@ body{
 
 h1, h2, h3, h4, h5 {
     font-family: 'montserrat', sans-serif;
+}
+
+.menu-container{
+  display: none;
 }
 
 /* HEADER */
@@ -26,7 +36,7 @@ align-items: center;
 }
 
 .logo span{
-    font-size: 2rem;
+    font-size: 30px;
     color: white;
     font-family: 'montserrat', sans-serif;
     font-weight: 600;
@@ -46,7 +56,7 @@ width: 70px;
 .menu {
       list-style: none;
       display: flex;
-      gap: 50px;
+      gap: 40px;
     }
 
     .menu > li {
@@ -59,7 +69,7 @@ width: 70px;
       color: #fff;
       text-decoration: none;
       transition: background 0.3s;
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .menu li a:hover {
@@ -123,6 +133,7 @@ width: 70px;
 .sessao-01{
     display: flex;
     width: 1320px;
+    justify-content: space-evenly;
 }
 
 .part-txt{
@@ -137,76 +148,20 @@ align-content: center;
 
 .part-txt h3{
     width: 80%;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #D4AF37;
     margin-bottom: 3rem;
 }
 
 .part-img img{
-    width: 600px;
+    width: 500px;
 }
 
 /* FIM DA SESSAO 01 */
 
 
+
 /* SESSÃO 02 */
-/* .s2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 5rem;
-    background-color: #e4e4e4;
-}
-.sessao-02{
-    width: 1320px;
-}
-
-.titulo{
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.titulo h2{
-    font-size: 2.5rem;
-    font-weight: normal;
-    color: black;
-}
-
-.part-txt-s2{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 5rem;
-}
-
-.part-txt-s2 p{
-  width: 1000px;
-  font-family: 'lato', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-.part-txt2-s2{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.quest{
-  margin-bottom: 3rem;
-}
-
-.part-txt2-s2 h3{
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.part-txt2-s2 p{
-width: 1000px;
-  font-family: 'lato', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-} */
 
 .s2 {
   padding: 0px 20px;
@@ -260,7 +215,8 @@ width: 1000px;
   margin-bottom: 5rem;
 }
 
-.quest {
+    
+.card {
   background-color: #ffffff;
   padding: 25px;
   border-radius: 12px;
@@ -268,21 +224,27 @@ width: 1000px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.quest:hover {
+.card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.quest h3 {
+.card h3 {
   font-size: 1.2rem;
   color: #010e27;
   margin-bottom: 10px;
 }
 
-.quest p {
+.card p {
   font-size: 1rem;
   line-height: 1.6;
 }
+
+.highlight {
+      background-color: #1ebe5b;
+      border-color: #fdcb6e;
+      color: #fff;
+    }
 
 
 
@@ -349,27 +311,37 @@ width: 1000px;
     align-items: center;
 }
 
-.botao-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      background-color: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
+.wpp {
+    position: fixed;
+    bottom: 20px;  /* distância do fundo da tela */
+    right: 20px;   /* distância da lateral direita */
+    z-index: 9999; /* fica por cima de outros elementos */
+  }
 
-    .botao-whatsapp i {
-      margin-right: 8px;
-      font-size: 20px;
-    }
+  .wpp2{
+    display: none;
+  }
+  .botao-whatsapp {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 
-    .botao-whatsapp:hover {
-      background-color: #1ebe5b;      
-    }
+  .botao-whatsapp:hover {
+    background-color: #1ebe5d;
+  }
+
+  .botao-whatsapp i {
+    font-size: 20px;
+  }
 
     /* FIM DA SESSÃO 03 */
 
