@@ -241,10 +241,16 @@ align-content: center;
 }
 
 .highlight {
-      background-color: #1ebe5b;
-      border-color: #fdcb6e;
-      color: #fff;
+      background-color: #010e27;      
     }
+
+.highlight h3{
+  color: white;
+}
+
+.highlight p{
+color: white;
+}
 
 
 
