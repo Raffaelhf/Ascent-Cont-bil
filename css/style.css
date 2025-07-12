@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5 {
     font-family: 'montserrat', sans-serif;
 }
 
+iframe{
+  width: 100vw;
+}
+
 .menu-container{
   display: none;
 }
@@ -81,7 +85,7 @@ width: 70px;
       position: absolute;
       top: 100%;
       left: 0;      
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #444 10%);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #010e27 10%);
       min-width: 150px;
       z-index: 999;
       list-style: none;
@@ -255,7 +259,20 @@ color: white;
 
 
 /* FIM DA SESSÃO 02  */
-
+.titulo2{
+  margin-bottom: 1.5rem;
+}
+.titulo2 h2{
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: px;
+  color: #1e1e1e;
+  position: relative;
+}
+.titulo2 p{
+  text-align: center;
+  font-family: 'lato', sans-serif;
+}
 
 /* SESSÃO 03 */
 .s3{
