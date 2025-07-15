@@ -267,11 +267,11 @@ color: white;
   }
 
   .links i {
-    font-size: 22px;
+    font-size: 32px;
   }
 
   .links a[href*="instagram"] i {
-    color: #e4405f;
+    color: #333;
   }
 
 /* FIM DA SESSÃO 03 */
