@@ -250,6 +250,7 @@ color: white;
   .links a {
     display: flex;
     align-items: center;
+    width: 70vw;
     gap: 10px;
     text-decoration: none;
     background-color: #f9f9f9;
